@@ -1,0 +1,206 @@
+@import url(start.css);
+/* ======================================== Header ======================================== */
+.header {
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 104px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+}
+.header__logo a {
+  display: flex;
+  align-items: center;
+}
+.header__logo span {
+  display: inline-block;
+  color: #000;
+  font-family: Sora;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.4px;
+  text-transform: capitalize;
+  flex: 1 1 auto;
+}
+.header__menu {
+  flex: 1 1 auto;
+}
+.menu {
+}
+.menu__list {
+  display: flex;
+  column-gap: 32px;
+}
+.menu__item {
+}
+.menu__link {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+@media (min-width: 870px) {
+  .menu__link:hover {
+    color: #404040;
+    text-decoration-line: underline;
+  }
+}
+.header__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 16px 20px;
+  gap: 8px;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  border: 2px solid #000;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 7;
+}
+.header__button:hover {
+  background: #404040;
+  border: 2px solid #404040;
+}
+.header__button:active {
+  color: #000;
+  border: 2px solid #000;
+  background-color: transparent;
+  background: url(/img/header/download-black.svg) 85% 50% no-repeat;
+}
+.header__button:active img {
+  visibility: hidden;
+}
+/* ======================================== Header burger menu ======================================== */
+.icon-menu {
+  display: none;
+}
+.header__logo {
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+@media (max-width: 870px) {
+  .header__container,
+  .menu__list {
+    column-gap: 10px;
+  }
+  .icon-menu {
+    display: block;
+    flex: 0 0 30px;
+    height: 18px;
+    position: relative;
+    z-index: 5;
+  }
+  .icon-menu span,
+  .icon-menu:before,
+  .icon-menu:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #000;
+    transition: all 0.3s ease;
+  }
+  .icon-menu::before {
+    top: 0;
+  }
+  .icon-menu::after {
+    bottom: 0;
+  }
+  .icon-menu span {
+    top: calc(50% - 2px);
+  }
+  .menu-open .icon-menu span {
+    width: 0;
+  }
+  .menu-open .icon-menu:before {
+    top: calc(50% - 2px);
+    transform: rotate(-45deg);
+  }
+  .menu-open .icon-menu:after {
+    bottom: calc(50% - 1px);
+    transform: rotate(45deg);
+  }
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* background-color: #404040; */
+    background-color: #262626;
+    left: -100%;
+    top: 0;
+    padding: 120px 15px 30px 15px;
+    overflow: auto;
+    transition: left 0.3s ease;
+  }
+  .menu__body::before {
+    content: "";
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 70px;
+    /* background-color: #404040; */
+    background-color: #262626;
+    z-index: 2;
+    transition: left 0.3s ease;
+  }
+  .menu__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+  }
+  .menu__link {
+    font-size: 32px;
+    color: #fff;
+  }
+}
+.menu-open .menu__body,
+.menu-open .menu__body::before {
+  left: 0;
+}
+.menu-open .header__logo svg {
+  fill: #fff;
+  stroke: #fff;
+}
+.menu-open .header__logo span {
+  color: #fff;
+}
+/* ================================================================================ */
+@media (max-width: 991.98px) {
+  .menu__list {
+    gap: 20px;
+  }
+  .header__container {
+    min-height: 90px;
+  }
+}
+@media (max-width: 410px) {
+  .header__logo span {
+    display: none;
+  }
+}
+/* ================================================================================ */
