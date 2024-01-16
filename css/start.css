@@ -133,4 +133,12 @@ body {
   line-height: 1.16; /* 116.667% */
   letter-spacing: -0.96px;
 }
+@media (max-width: 425.98px) {
+  .title,
+  .title-black,
+  .title-white,
+  .title-white-extra {
+    font-size: 38px;
+  }
+}
 /* ================================================================================ */

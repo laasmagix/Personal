@@ -416,3 +416,103 @@
   }
 }
 /* ================================================================================ */
+/* ======================================== Experience ======================================== */
+.page__experience {
+}
+.experience {
+  background-color: #000;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+.experience__container {
+}
+.experience__title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.experience__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.experience__item {
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #71717a;
+  padding: 30px 24px;
+  max-width: 1168px;
+  transition: all 0.3s ease;
+}
+.experience__item:hover {
+  background-color: #27272a;
+}
+.item-experience {
+}
+.item-experience__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 30px;
+  margin-bottom: 30px;
+}
+.item-experience__title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -0.48px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-right: 15px;
+}
+.item-experience__date {
+  color: #d4d4d8;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25; /* 20/16 */
+  letter-spacing: -0.32px;
+}
+.item-experience__text {
+  color: #d4d4d8;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.32px;
+}
+@media (max-width: 991.98px) {
+  .experience {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .experience__title {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .experience {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .experience__title {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 620.98px) {
+  .item-experience__title {
+    padding: 0;
+  }
+}
+@media (max-width: 425.98px) {
+  .item-experience__title {
+    font-size: 20px;
+  }
+  .experience__item {
+    padding: 18px;
+    max-width: 1168px;
+    transition: all 0.3s ease;
+  }
+}
+/* ================================================================================ */
