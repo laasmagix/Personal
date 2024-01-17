@@ -397,11 +397,11 @@
 }
 @media (max-width: 767.98px) {
   .skills {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .skills__title {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 620.98px) {
@@ -493,11 +493,11 @@
 }
 @media (max-width: 767.98px) {
   .experience {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .experience__title {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 620.98px) {
@@ -513,6 +513,64 @@
     padding: 18px;
     max-width: 1168px;
     transition: all 0.3s ease;
+  }
+}
+/* ================================================================================ */
+/* ======================================== About Me ======================================== */
+.page__about-me {
+}
+.about-me {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.about-me__container {
+  display: flex;
+  justify-content: space-between;
+}
+.about-me__image {
+  flex: 0 1 50%;
+}
+.about-me__image img {
+  max-width: 100%;
+}
+.about-me__body {
+  flex: 0 1 50%;
+}
+.about-me__title {
+  margin-bottom: 40px;
+}
+.about-me__text {
+  color: #71717a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.32px;
+}
+.about-me__text p:not(:last-child) {
+  padding-bottom: 20px;
+}
+@media (max-width: 1230px) {
+  .about-me__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-me__image {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 991.98px) {
+  .about-me {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .about-me__title {
+    margin-bottom: 30px;
+  }
+  .about-me__image img {
+    max-height: 380px;
   }
 }
 /* ================================================================================ */
